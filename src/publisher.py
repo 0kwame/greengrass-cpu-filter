@@ -28,18 +28,3 @@ class IoTPublisher:
             self.logger.info("successfully published message:", result)
         except Exception as e:
             self.logger.error("failed to publish message:", e)
-
-# class IoTPublisher:
-#     def __init__(self):
-#         self.client = awsiot.greengrasscoreipc.connect()
-#         self.cloud_topic = "cloud/metrics/cpu"
-
-#     def send_message(self, message: dict):
-#         try:
-#             request = PublishToTopicRequest()
-#             request.topic = self.cloud_topic
-#             request.payload = json.dumps(message).encode()
-#             self.client.publish_to_topic(request)
-#             logging.info(f"Published to cloud: {message}")
-#         except Exception as e:
-#             logging.error(f"Error publishing: {e}")
