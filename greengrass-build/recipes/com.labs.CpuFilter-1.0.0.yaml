@@ -1,6 +1,6 @@
 RecipeFormatVersion: '2020-01-25'
 ComponentName: com.labs.CpuFilter
-ComponentVersion: 1.0.6
+ComponentVersion: 1.0.0
 ComponentDescription: Greengrass Core component that filters CPU metrics from IoT
   devices.
 ComponentPublisher: 0kwame
@@ -20,7 +20,7 @@ Manifests:
 - Platform:
     os: all
   Artifacts:
-  - URI: s3://greengrass-components-eu-central-1-382828593864/com.labs.CpuFilter/1.0.6/greengrass-cpu-filter.zip
+  - URI: s3://greengrass-components-eu-central-1-382828593864/com.labs.CpuFilter/1.0.0/greengrass-cpu-filter.zip
     Unarchive: ZIP
   Lifecycle:
     Install:

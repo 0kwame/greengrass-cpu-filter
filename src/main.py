@@ -3,8 +3,11 @@ from publisher import IoTPublisher
 from subscriber import LocalSubscriber
 
 def main():
-    publisher = IoTPublisher()
+    # publisher = IoTPublisher()
     # subscriber = LocalSubscriber("iot/metrics/cpu", publisher)
+    subscriber = LocalSubscriber("iot/metrics/cpu")
+    subscriber.subscribe()
+
     # subscriber.subscribe()
 
     while True:
