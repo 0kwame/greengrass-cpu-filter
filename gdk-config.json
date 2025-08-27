@@ -1,0 +1,16 @@
+{
+  "component": {
+    "com.labs.CpuFilter": {
+      "author": "0kwame",
+      "version": "NEXT_PATCH",
+      "build": {
+        "build_system": "zip"
+      },
+      "publish": {
+        "bucket": "greengrass-components",
+        "region": "eu-central-1"
+      }
+    }
+  },
+  "gdk_version": "1.0.0"
+}
