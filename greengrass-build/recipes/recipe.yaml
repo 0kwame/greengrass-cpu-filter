@@ -9,11 +9,23 @@ ComponentConfiguration:
     Period: 0.5
     accessControl:
       aws.greengrass.ipc.mqttproxy:
-        com.labs.HelloWorld:pubsub:1:
+        com.labs.CpuFilter:pubsub:1:
           policyDescription: Publish and subscribe to any topic
+          operations:
+          - aws.greengrass#SubscribeToIoTCore
+          - aws.greengrass#SubscribeToTopic
+          - aws.greengrass#PublishToTopic
+          - aws.greengrass#PublishToIoTCore
+          resources:
+          - '*'
+      aws.greengrass.ipc.pubsub:
+        com.labs.CpuFilter:iotcore:1:
+          policyDescription: Allow publishing to IoT Core
           operations:
           - aws.greengrass#PublishToIoTCore
           - aws.greengrass#SubscribeToIoTCore
+          - aws.greengrass#SubscribeToTopic
+          - aws.greengrass#PublishToTopic
           resources:
           - '*'
 Manifests:

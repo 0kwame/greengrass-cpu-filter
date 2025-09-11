@@ -1,2 +1,4 @@
 keys/
 .venv
+greengrass-build/
+zip-build/
