@@ -13,7 +13,7 @@ class MyStreamHandler(SubscribeToTopicStreamHandler):
         super().__init__()
         self.subscriber = subscriber
 
-    def on_stream_event(self, event):
+        def on_stream_event(self, event):
         try:
             print(f"message receving...", event)
             if hasattr(event, "json_message") and event.json_message:
